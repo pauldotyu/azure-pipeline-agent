@@ -192,6 +192,7 @@
 [dockeragent]:https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops#linux
 [azpat]:https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page
 [azr]:https://azure.microsoft.com/en-us/services/container-registry/
+[acr]:https://azure.microsoft.com/en-us/services/container-registry/
 [aci]:https://azure.microsoft.com/en-us/services/container-instances/
 [vnet]:https://azure.microsoft.com/en-us/services/virtual-network/
 [vnetpeer]:https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview
