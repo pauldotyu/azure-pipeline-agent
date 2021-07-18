@@ -23,6 +23,8 @@
 - [Azure Container Registry][acr]
 - [Azure Container Instance][aci]
 - [Azure Virtual Network][vnet] with [virtual network peering][vnetpeer] in place to communicate with other resources in Azure
+- [Azure Key Vault][akv]
+- [Azure Service Principal][asp]
 
 ## Step 1: Customize and build your Docker agent and run locally
 
@@ -194,6 +196,8 @@
 [azr]:https://azure.microsoft.com/en-us/services/container-registry/
 [acr]:https://azure.microsoft.com/en-us/services/container-registry/
 [aci]:https://azure.microsoft.com/en-us/services/container-instances/
+[akv]:https://azure.microsoft.com/en-us/services/key-vault/
+[asp]:https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object
 [vnet]:https://azure.microsoft.com/en-us/services/virtual-network/
 [vnetpeer]:https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview
 [pool]:https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/pools-queues?view=azure-devops&tabs=yaml%2Cbrowser
