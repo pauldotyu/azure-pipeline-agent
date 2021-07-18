@@ -196,7 +196,7 @@ If you don't already have a virtual network and subnet created, follow this [gui
 
 With the container instance up and running, you can view the status of your agent by navigating to your [agents page in Azure DevOps][azpagents]. You can also [add additional capabilities][azpcapabilities] to your agent to ensure you are [choosing the right agent for the right job][azpchoosing] based on your build [demands][azpdemands]
 
-![Capabilities](/images/1c70867e11bb4fd6a6fa38f8c6a92840.png))
+![Capabilities](/images/1c70867e11bb4fd6a6fa38f8c6a92840.png)
 
 In your pipeline, you can then "demand" certain capabilities are in place for an agent to be eligible to run a pipeline
 
