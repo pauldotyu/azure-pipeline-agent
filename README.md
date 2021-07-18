@@ -46,7 +46,7 @@
 
 - To run the container, you will need to pass in some environment variables on startup:
 
-	- `AZP_URL` is your Azure DevOps Organization URL (i.e., https://dev.azure.com/{YOUR_ORG_NAME}/)
+	- `AZP_URL` is your Azure DevOps Organization URL (i.e., https://dev.azure.com/<YOUR_ORG_NAME>/)
 	- `AZP_TOKEN` is your PAT which you can obtain by following this [doc][azpat]
 	- `AZP_AGENT_NAME` is your build agent name
 	- `AZP_POOL` is your build agent pool (you may need to create this ahead of time, if so, follow this [doc][pool])
