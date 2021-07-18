@@ -42,7 +42,7 @@ RUN apt-get install python3 \
 
 ARG TARGETARCH=amd64
 
-# Update this version
+# TODO: Keep this version up to date
 ARG AGENT_VERSION=2.185.1
 
 WORKDIR /azp
