@@ -71,11 +71,11 @@ You have two options for getting your images into your Azure Container registry:
 
 1. Build the container locally and push using `docker build` and `docker push` commands. See this guide for [more][acrpush].
 
-  > NOTE: You will need to login to your registry using `az acr login` or `docker login` commands
+    > NOTE: You will need to login to your registry using `az acr login` or `docker login` commands
 
 1. Build the container in Azure using ACR Tasks. See this guide for [more][acrbuild].
 
-  > NOTE: The rest of this section will use ACR Tasks
+    > NOTE: The rest of this section will use ACR Tasks
 
 We will be using Azure CLI within a Bash shell for this work.
 
