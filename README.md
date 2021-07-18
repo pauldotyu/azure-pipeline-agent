@@ -75,9 +75,7 @@ You have two options for getting your images into your Azure Container registry:
 
 1. Build the container in Azure using ACR Tasks. See this guide for [more][acrbuild].
 
-    > NOTE: The rest of this section will use ACR Tasks
-
-We will be using Azure CLI within a Bash shell for this work.
+The rest of this section will use ACR tasks to build and push the container and we will be using Azure CLI within a Bash shell for this work.
 
 - Set up your variables
   
