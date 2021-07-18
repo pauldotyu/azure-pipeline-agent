@@ -5,8 +5,8 @@
 - Microsoft-hosted Azure Pipeline agent run in the public space; therefore, they can only deploy to environments that are publicly accessible.
 - Some organizations may need to deploy to target envrionments that are only accessible within private space (e.g., inside a Azure Virtual Network).
 - When the target environment is not publicly accessible, deploying self-hosted pipelines agents are a common solution.
-- Customers can self-host Azure Pipeline agents on [Linux][azplinux], [macOS][azpmacos], or [Windows][azpwindows] (physical or virtual machines) or [Azure Virtual Machine Scale Sets][azpvmss]; however, this may introduce unwanted overhead in having to patch and maintain these machines.
-- The alternative is to run an agent in a Docker container and host it in Azure Container Instance which can run inside of the customer's virtual network and we'll explore this option for the rest of this guide.
+- Organizations can self-host Azure Pipeline agents on [Linux][azplinux], [macOS][azpmacos], or [Windows][azpwindows] (physical or virtual machines) or [Azure Virtual Machine Scale Sets][azpvmss]; however, this may introduce unwanted overhead in having to patch and maintain these machines.
+- The alternative is to run an agent in a Docker container and host it in Azure Container Instance which can run inside of the organization's virtual network and we'll explore this option for the rest of this guide.
 
 ## Local Tools Required
 
