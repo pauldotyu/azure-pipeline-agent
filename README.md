@@ -8,6 +8,11 @@
 - Organizations can self-host Azure Pipeline agents on [Linux][azplinux], [macOS][azpmacos], or [Windows][azpwindows] (physical or virtual machines) or [Azure Virtual Machine Scale Sets][azpvmss]; however, this may introduce unwanted overhead in having to patch and maintain these machines.
 - The alternative is to run an agent in a Docker container and host it in Azure Container Instance which can run inside of the organization's virtual network and we'll explore this option for the rest of this guide.
 
+
+## Architecture
+
+![ACI-Pipelines-Architecture](./images/architecture.png)
+
 ## Local Tools Required
 
 You'll need the tools listed below to follow along this step-by-step guide:
@@ -40,12 +45,12 @@ Let's begin by runing our container locally to see it all working. If all you ne
   ![Dockerfile](/images/b4f4076c512945bb925273b0f1e8dc77.png)
 
 - Make sure you have the `Dockerfile` and `start.sh` files in the same directory and go build the container.
-  
+
   > This assumes you are in the directory where `Dockerfile` and `start.sh` sits
 
   ```sh
   # Name and tag this container however you want
-  docker build -t azpagent:latest . 
+  docker build -t azpagent:latest .
   ```
 
 - To run the container, you will need to pass in some environment variables on startup:
@@ -78,7 +83,7 @@ You have two options for getting your images into your Azure Container registry:
 The rest of this section will use ACR tasks to build and push the container and we will be using Azure CLI within a Bash shell for this work.
 
 - Set up your variables
-  
+
   ```sh
   RG_NAME=rg-containercentral
   ACR_NAME=contosocr
