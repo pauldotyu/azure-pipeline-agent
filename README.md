@@ -141,7 +141,7 @@ If you do not already have an Azure Key Vault, follow this [guide][akv] to set o
   az keyvault secret set \
     --vault-name $AKV_NAME \
     --name $ACR_NAME-pull-usr \
-    --value $(az ad sp show --id http://$ACR_NAME-pull --query appId --output tsv)
+    --value $(az ad sp list --display-name http://$ACR_NAME-pull --query "[0].servicePrincipalNames[0]" -o tsv)
   ```
 
 ## Step 4: Run your container in Azure Container Instance (in a virtual network)
