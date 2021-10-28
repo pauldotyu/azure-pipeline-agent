@@ -177,8 +177,6 @@ If you don't already have a virtual network and subnet created, follow this [gui
     --registry-login-server $ACR_LOGIN_SERVER \
     --registry-username $(az keyvault secret show --vault-name $AKV_NAME -n $ACR_NAME-pull-usr --query value -o tsv) \
     --registry-password $(az keyvault secret show --vault-name $AKV_NAME -n $ACR_NAME-pull-pwd --query value -o tsv) \
-    --assign-identity $(az identity show -n $ACI_NAME -g $RG_NAME --query id -o tsv) \
-    --ip-address Private \
     --vnet $VNET_NAME \
     --subnet $SNET_NAME \
     --restart-policy never \
