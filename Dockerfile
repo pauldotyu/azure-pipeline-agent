@@ -27,23 +27,24 @@ RUN curl -LsS https://aka.ms/InstallAzureCLIDeb | bash \
 # Install Terraform
 RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add - \
   && apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main" \
-  && apt install terraform
+  && apt install terraform \
+  && apt install packer
 
-# Install Ansible with modules
-RUN apt-get install python3 \
-  && apt-get install python3-pip \
-  && pip3 install --upgrade pip \
-  && pip3 install wheel \
-  && pip3 install ansible \
-  && pip3 install "pywinrm>=0.3.0" \
-  && pip3 install azure-keyvault azure-common \
-  && ansible-galaxy collection install ansible.windows \
-  && ansible-galaxy install azure.azure_preview_modules
+# # Install Ansible with modules
+# RUN apt-get install python3 \
+#   && apt-get install python3-pip \
+#   && pip3 install --upgrade pip \
+#   && pip3 install wheel \
+#   && pip3 install ansible \
+#   && pip3 install "pywinrm>=0.3.0" \
+#   && pip3 install azure-keyvault azure-common \
+#   && ansible-galaxy collection install ansible.windows \
+#   && ansible-galaxy install azure.azure_preview_modules
 
 ARG TARGETARCH=amd64
 
-# TODO: Keep this version up to date
-ARG AGENT_VERSION=2.185.1
+# TODO: Keep this version up to date https://github.com/microsoft/azure-pipelines-agent
+ARG AGENT_VERSION=2.193.1
 
 WORKDIR /azp
 RUN if [ "$TARGETARCH" = "amd64" ]; then \
